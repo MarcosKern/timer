@@ -1,0 +1,17 @@
+.startBtn {
+  height: 3em;
+  width: 8em;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #a773fa;
+  box-shadow:
+  10px 10px 50px #0004;
+  transition: .2s ease-in-out;
+}
+
+.startBtn:hover {
+  cursor: pointer;
+  background-color: #9268d5;
+}

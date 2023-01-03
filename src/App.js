@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import SetTimeInterval from "./components/SetTimeInterval";
+import StartButton from "./components/StartButton";
+import Timer from "./components/Timer";
+import MyContext from "./context/Context";
+import './styles/screen.css'
 
 function App() {
+  const { timerAppears } = useContext(MyContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="mainScreen">
+      <Timer />
+      {timerAppears && (<SetTimeInterval />)}
+      {timerAppears && (<StartButton />)}
+    </section>
   );
 }
 

@@ -1,0 +1,22 @@
+.setTime {
+  display: flex;
+  gap: .5em;
+}
+
+input {
+  height: 3em;
+  width: 8em;
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #a773fa;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
