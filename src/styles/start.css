@@ -2,16 +2,25 @@
   height: 3em;
   width: 8em;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 20px;
   border-radius: 10px;
   background-color: #a773fa;
-  box-shadow:
-  10px 10px 50px #0004;
-  transition: .2s ease-in-out;
+  transition: .1s linear;
 }
 
-.startBtn:hover {
+.stopBtn {
+  border: #a773fa 3px solid;
+  height: 3em;
+  width: 8em;
+  color: #a773fa;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: .1s linear;
+}
+
+.startBtn:hover,
+.stopBtn:hover {
   cursor: pointer;
-  background-color: #9268d5;
+  filter: brightness(.9);
 }

@@ -1,4 +1,4 @@
 .counter {
   font-size: 120px;
-  filter: drop-shadow(-20px 90px 10px #000a);
+  font-family: sans-serif;
 }

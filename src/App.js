@@ -11,8 +11,8 @@ function App() {
   return (
     <section className="mainScreen">
       <Timer />
-      {timerAppears && (<SetTimeInterval />)}
-      {timerAppears && (<StartButton />)}
+      <SetTimeInterval />
+      <StartButton />
     </section>
   );
 }

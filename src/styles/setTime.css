@@ -1,6 +1,11 @@
 .setTime {
   display: flex;
   gap: .5em;
+  transition: .1s linear;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 input {
@@ -15,8 +20,12 @@ input {
 }
 
 input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button
-{
-  -webkit-appearance: none;
-  margin: 0;
+input[type=number]::-webkit-outer-spin-button { 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 3em;
+  border: 5px solid #bbb;
+  opacity: .4;
+  cursor: pointer;
 }

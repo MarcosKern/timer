@@ -1,9 +1,7 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import MyContext from './Context';
-
-const ONE_SEC = 1000;
 
 function Provider({ children }) {
   const [totalHours, setTotalHours] = useState('00');
