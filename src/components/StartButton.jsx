@@ -55,7 +55,9 @@ export default function StartButton() {
     <button className={ timerAppears ? 'startBtn' : 'stopBtn' }
       onClick={ timerAppears ? handleClick : handleStop }
     >
-      START
+      {
+        timerAppears ? 'START' : 'STOP'
+      }
     </button>
   )
 }
