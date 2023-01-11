@@ -1,4 +1,10 @@
 .counter {
   font-size: 120px;
   font-family: sans-serif;
+  color: #a773fa;
+  padding: 0 1em;
+  border-radius: 20px;
+  box-shadow:
+  #a773fa90 0px 0px 20px,
+  #a773fa50 0px 0px 60px;
 }
