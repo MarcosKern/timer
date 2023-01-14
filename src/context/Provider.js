@@ -8,7 +8,7 @@ function Provider({ children }) {
   const [totalMinutes, setTotalMinutes] = useState('00');
   const [totalSeconds, setTotalSeconds] = useState('00');
   const [timerAppears, setTimerAppears] = useState(true);
-  const [ darkMode, setDarkMode ] = useState(false);
+  const [ darkMode, setDarkMode ] = useState(true);
 
   const value = useMemo(() => ({
     totalHours, setTotalHours,
