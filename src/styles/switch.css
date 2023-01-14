@@ -1,0 +1,10 @@
+.dayNightBtn {
+  height: 3em;
+  width: 8em;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #a773fa;
+  transition: .1s linear;
+}

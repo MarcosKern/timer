@@ -15,8 +15,8 @@ export default function SetTimeInterval() {
         value
       }
     } = eve;
-    
-    func(value.padStart(2, '0'))
+    const newValue = value
+    func(newValue.padStart(2, '0'))
   }
 
   return (
