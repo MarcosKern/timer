@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import MyContext from '../context/Context';
 import '../styles/start.css'
 
@@ -11,13 +11,16 @@ export default function StartButton() {
     totalMinutes, setTotalMinutes,
     totalSeconds, setTotalSeconds
   } = useContext(MyContext);
+  const [ timerId, setTimerId ] = useState(0)
 
   let secs = Number(totalSeconds);
   let mins = Number(totalMinutes);
   let hrs = Number(totalHours);
+
   const handleClick = () => {
     setTimerAppears(!timerAppears);
     const timer = setInterval(() => {
+      setTimerId(timer)
       if (secs === 0 && mins === 0 && hrs > 0) {
         secs = 60;
         mins = 59;
@@ -34,6 +37,8 @@ export default function StartButton() {
       if (secs >= 0) {
         setTotalSeconds((secs).toString().padStart(2, '0'))
       }
+      console.log(`${hrs}:${mins}:${secs}`)
+      
       if (
         hrs === 0
         && mins === 0
@@ -43,12 +48,12 @@ export default function StartButton() {
           setTimerAppears(true)
           return
       }
-      console.log(`${hrs}:${mins}:${secs}`)
     }, ONE_SEC);
   }
 
   const handleStop = () => {
     setTimerAppears(!timerAppears)
+    clearInterval(timerId)
   }
 
   return (
