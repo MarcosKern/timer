@@ -8,6 +8,8 @@ function Provider({ children }) {
   const [totalMinutes, setTotalMinutes] = useState('00');
   const [totalSeconds, setTotalSeconds] = useState('00');
   const [timerAppears, setTimerAppears] = useState(true);
+  const [menuCollapse, setMenuCollapse] = useState(true);
+  const [selectedMode, setSelectedMode] = useState(1);
   const [ darkMode, setDarkMode ] = useState(true);
 
   const value = useMemo(() => ({
@@ -15,12 +17,16 @@ function Provider({ children }) {
     totalMinutes, setTotalMinutes,
     totalSeconds, setTotalSeconds,
     timerAppears, setTimerAppears,
+    menuCollapse, setMenuCollapse,
+    selectedMode, setSelectedMode,
     darkMode, setDarkMode,
   }), [
     totalHours, setTotalHours,
     totalMinutes, setTotalMinutes,
     totalSeconds, setTotalSeconds,
     timerAppears, setTimerAppears,
+    menuCollapse, setMenuCollapse,
+    selectedMode, setSelectedMode,
     darkMode, setDarkMode,
   ]);
 

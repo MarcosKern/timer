@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import DarkModeSwitch from "./components/DarkModeSwitch";
+import Menu from "./components/Menu";
 import SetTimeInterval from "./components/SetTimeInterval";
 import StartButton from "./components/StartButton";
 import Timer from "./components/Timer";
@@ -18,6 +19,7 @@ function App() {
       <SetTimeInterval />
       <StartButton />
       <DarkModeSwitch  />
+      <Menu />
     </section>
   );
 }
