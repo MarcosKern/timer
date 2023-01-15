@@ -8,3 +8,8 @@
   background-color: #a773fa;
   transition: .1s linear;
 }
+
+.dayNightBtn:hover {
+  cursor: pointer;
+  filter: brightness(.9);
+}

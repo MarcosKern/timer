@@ -17,7 +17,7 @@ function App() {
       <Timer />
       <SetTimeInterval />
       <StartButton />
-      <DarkModeSwitch />
+      <DarkModeSwitch  />
     </section>
   );
 }
