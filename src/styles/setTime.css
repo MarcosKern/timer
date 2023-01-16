@@ -8,6 +8,10 @@
   opacity: 0;
 }
 
+.hidden input:hover {
+  cursor: default;
+}
+
 input {
   height: 3em;
   width: 8em;
