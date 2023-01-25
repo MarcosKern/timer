@@ -4,18 +4,12 @@
   transition: .1s linear;
 }
 
-.hidden {
-  opacity: 0;
-}
-
-.hidden input:hover {
-  cursor: default;
-}
-
-input {
+.setTime > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 3em;
   width: 8em;
-  text-align: center;
   border: none;
   color: white;
   font-size: 20px;
@@ -23,13 +17,37 @@ input {
   background-color: #a773fa;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button { 
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 3em;
-  border: 5px solid #bbb;
-  opacity: .4;
+.setTime > div > p {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.setTime > div > button {
+  flex: 2;
+  height: 100%;
+  background-color: transparent;
+  font-size: 20px;
+  color: white;
+  border: none;
+  transition: .1s linear;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+.setTime > div > button:hover {
+  backdrop-filter: brightness(.8);
+  -webkit-backdrop-filter: brightness(.8);
   cursor: pointer;
+}
+
+.decrement {
+  border-radius: 10px 0 0 10px;
+}
+
+.increment {
+  border-radius: 0 10px 10px 0;
 }
