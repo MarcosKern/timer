@@ -38,18 +38,21 @@ export default function SetTimeInterval() {
 
   return (
     <section className={`setTime ${ !timerAppears && 'hidden' }`}>
-      <input type="number" name="Hours" value={ totalHours }
-        id="h" max='24' min='00' readOnly={ !timerAppears }
-        onChange={(event) => handleChange(event, setTotalHours, 'hour')}
-      />
-      <input type="number" name="Minutes" readOnly={ !timerAppears }
-        id="m" max='59' min='00' value={ totalMinutes }
-        onChange={(event) => handleChange(event, setTotalMinutes, 'minutes')}
-      />
-      <input type="number" name="Seconds" readOnly={ !timerAppears }
-        id="s" max='60' min='00' step='10' value={ totalSeconds }
-        onChange={(event) => handleChange(event, setTotalSeconds,'seconds')}
-      />
+      <div>
+        <button>-</button>
+        <p>{ totalHours }</p>
+        <button>+</button>
+      </div>
+      <div>
+        <button>-</button>
+        <p>{ totalMinutes }</p>
+        <button>+</button>
+      </div>
+      <div>
+        <button>-</button>
+        <p>{ totalSeconds }</p>
+        <button>+</button>
+      </div>
     </section>
   )
 }
