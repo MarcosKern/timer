@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Engine } from "react-matter-js";
 import DarkModeSwitch from "./components/DarkModeSwitch";
 import SetTimeInterval from "./components/SetTimeInterval";
 import StartButton from "./components/StartButton";
@@ -11,13 +12,15 @@ function App() {
   
   return (
     <section className={`${darkMode ? 'lightMode' : 'darkMode'} mainScreen`}>
-      <>
-        <title>{ `${totalHours}:${totalMinutes}:${totalSeconds}` }</title>
-      </>
-      <Timer />
-      <SetTimeInterval />
-      <StartButton />
-      <DarkModeSwitch  />
+      <Engine options={{}}>
+        <>
+          <title>{ `${totalHours}:${totalMinutes}:${totalSeconds}` }</title>
+        </>
+        <Timer />
+        <SetTimeInterval />
+        <StartButton />
+        <DarkModeSwitch  />
+      </Engine>
     </section>
   );
 }
